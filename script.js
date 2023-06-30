@@ -41,6 +41,7 @@ const hoursEl = document.querySelector(".hour");
 const digihEl = document.getElementById("left");
 const digimEl = document.getElementById("middle");
 const digisEl = document.getElementById("right");
+const ampmEl = document.getElementById("ampm");
 
 function updateClock()
 {
@@ -48,7 +49,8 @@ function updateClock()
     let s = new Date().getSeconds();
     let m = new Date().getMinutes();
     let h = new Date().getHours();
-    
+    let ampm = "AM";
+   
     const hourdeg = (h/12)*360;
     hoursEl.style.transform = `rotate(${hourdeg}deg )`;
 
@@ -57,7 +59,13 @@ function updateClock()
 
     const secdeg = (s/60)*360;
     secondsEl.style.transform = `rotate(${secdeg}deg )`;
-    
+
+    if (h > 12) {
+        h = h - 12;
+        ampm = "PM";
+      }
+
+    ampmEl.innerText = ampm;
     digihEl.innerText = h-12 ;
     digisEl.innerText = s ;
     digimEl.innerText = m;
