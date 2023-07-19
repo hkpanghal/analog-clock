@@ -80,3 +80,10 @@ function updateClock()
 }
 
 updateClock();
+
+gsap.from("#gradient",{
+    duration:5,
+    rotate:360,
+    repeat:-1,
+    
+})
