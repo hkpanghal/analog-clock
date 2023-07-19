@@ -43,6 +43,13 @@ const digimEl = document.getElementById("middle");
 const digisEl = document.getElementById("right");
 
 const ampmEl = document.getElementById("ampm");
+
+const darkbuttonEl = document.getElementById("darkbutton");
+darkbuttonEl.addEventListener('click',function(){
+  
+    document.getElementsByTagName('body')[0].classList.toggle("dark-theme");
+       
+})
 function updateClock()
 {
    
