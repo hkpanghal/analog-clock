@@ -177,3 +177,13 @@ img{
     border: 2px solid black;
     box-shadow: 1px 1px 4px rgba(0,0,0,.7);;
 }
+#gradient{
+    background-color: blueviolet;
+    height: 320px;
+    width: 320px;
+    position: absolute;
+    background: linear-gradient(45deg,#0ce39a,#69007f,#fc0987);
+    border-radius: 100%;
+    box-shadow:2px 2px 20px #fc0987;
+   
+}
